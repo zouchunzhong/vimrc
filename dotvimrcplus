@@ -1,0 +1,29 @@
+set nocompatible
+echom ">^.^<---<-ZCZ->--->^.^<"
+set number numberwidth=1 hls is ic
+" i-mode: delete a line
+inoremap <c-d> <esc>ddi
+" i-wordmode: change a word to upper/lower case
+inoremap <c-u> <esc>viwU
+let mapleader = "\\"
+let maplocalleader = "\\"
+" Vimscript file settings----------{{{
+" let MYVIMRC = "~/.vimrc"
+" let MYVIMRCPLUS = "~/.vimrcplus"
+nnoremap <Leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <Leader>sv :source $MYVIMRC<cr>
+" if $MYVIMRC doesn't work, change to
+" nnoremap <Leader>ev :vsplit ~/.vimrc<cr>
+" nnoremap <Leader>sv :vsplit ~/.vimrc<cr>
+nnoremap <Leader>ep :vsplit ~/.vimrcplus<cr>
+nnoremap <Leader>sp :source ~/.vimrcplus<cr>
+" }}}
+" abbreviation
+iabbrev @@ zoucz@neurostyle.biz
+iabbrev zczsig -- <cr>zouchunzhong<cr>zoucz@neurostyle.biz
+" Vimscript file settings----------{{{
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
+" }}}
